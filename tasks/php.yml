@@ -41,9 +41,9 @@
   copy:
     content: |
       <?php
-      define('APPLICATION_PATH', '{{ camac_php_libdir }}/application');
-      define('APPLICATION_ENV', '{{ camac_env }}');
-      define('APPLICATION', '{{ camac_application }}');
+      putenv('APPLICATION_PATH={{ camac_php_libdir }}/application');
+      putenv('APPLICATION_ENV={{ camac_env }}');
+      putenv('APPLICATION={{ camac_application }}');
       {% if camac_mock_tls %}
       $_SERVER['HTTPS'] = true;
       {% endif %}
