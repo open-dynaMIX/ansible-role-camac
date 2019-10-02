@@ -63,6 +63,9 @@ camac_php_tmpdir: "{{ camac_php_datadir }}/tmp"
 # Directory in which to write logfiles to.
 camac_php_logdir: "{{ camac_php_basedir }}/log"
 
+# PHP settings which are set in prepend.php
+camac_php_settings: {}
+
 # Whether camac is supposed to load initial data from fixtures.
 camac_load_data: true
 
